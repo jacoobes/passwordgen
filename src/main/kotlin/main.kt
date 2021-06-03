@@ -7,8 +7,7 @@ fun main(args: Array<String>) {
 
      println("How long do you want your password to be?")
 
-    val howLong = readLine()?.toIntOrNull() ?: throw RuntimeException("Not a number")
-
+    val howLong = readLine()?.toIntOrNull() ?: throw RuntimeException("Not a number!")
     println(passwordGen(howLong))
 }
 
