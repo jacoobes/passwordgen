@@ -1,0 +1,32 @@
+
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+}
+
+group = "me.jacob"
+version = "1.0"
+
+allprojects {
+    repositories {
+        mavenCentral()
+        }
+}
+
+dependencies {
+
+    kotlin{
+        sourceSets {
+            commonTest {
+                dependencies {
+                    implementation kotlin("test")
+                }
+            }
+        }
+    }
+
+}
+
+tasks.test {
+    useJUnit()
+}
